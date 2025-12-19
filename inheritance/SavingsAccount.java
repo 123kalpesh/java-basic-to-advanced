@@ -1,30 +1,21 @@
-package inheritace;
-public class SavingsAccount extends inheritace_BankAccount {
-    private double interestRate;
-    public SavingsAccount(double balance, double interestRate){
-        super(balance);
-        this.interestRate = interestRate;
-    }
-    public void addInterest(){
-        double interest = getBalance() * interestRate;
-        deposit(interest);
-    }package inheritance;
+package inheritance;
 
 public class SavingsAccount extends BankAccount {
     private double interestRate;
     
     public SavingsAccount(double balance, double interestRate) {
         super(balance);
-        this.interestRate = interestRate;
+        this.interestRate = interestRate / 100; // Convert percentage to decimal
+    }
+    
+    @Override
+    public void display() {
+        System.out.println("Savings Account");
     }
     
     public void addInterest() {
-        double interest = getBalance() * (interestRate / 100);
+        double interest = getBalance() * interestRate;
         deposit(interest);
         System.out.println("Added interest: " + interest);
-    }
-}
-    public void display(){
-        System.out.println("Savings Account");
     }
 }

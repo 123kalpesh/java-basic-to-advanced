@@ -7,7 +7,7 @@
 //Bank Account System
 //Create a BankAccount class with methods for deposit() and withdraw()
 //Create SavingsAccount and CheckingAccount classes with their own interest rates and withdrawal rules
-package inheritace;
+package inheritance;
 public class BankAccount {
     protected double balance;
     public BankAccount(double balance){
